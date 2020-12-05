@@ -1,0 +1,43 @@
+#projects {
+    padding-right: 2rem;
+    padding-left: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.projects-title {
+    width: 100%;
+    padding-right: 1rem;
+    color: $main-color;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Made Dillan';
+    text-transform: capitalize;
+}
+
+.projects-text {
+    padding-right: 1rem;
+    font-size: 18px;
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.projects-box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@import "row-2-module";

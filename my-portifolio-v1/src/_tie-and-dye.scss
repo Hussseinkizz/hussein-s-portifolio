@@ -1,0 +1,559 @@
+ /* Welcome To Tie & Dye CSS, The First Cool Tricks CSS Library! 
+== version 1.5, 28 Nov 2020 Setup ==
+>> Here comes the best CSS tricks, make sure to check our bit sized docs!
+*/
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    line-height: 1.7;
+    scrollbar-color: light;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+-o-font-smoothing: antialiased;
+}
+
+  // variables settings //
+  $max-width: 1284px;
+  $br-b: 12px;
+  $br-m: 30px;
+  $br-c: 50%;
+  $ts: 1px 1px 10px rgba(#2a3540,0.4);
+  $bs-light: 0 0 8px rgba(0, 0, 0, 0.3 );
+  $bs-dark: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+@mixin transit-ease {
+    transition: all 0.3s ease-in-out;
+  }
+
+  // pseudo settings //
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+    background-color: #eff1f5;
+  }
+  
+  html::-webkit-scrollbar-track{
+    border-radius: 3px;
+    background-color: transparent;
+  }
+  
+  html::-webkit-scrollbar-thumb{
+    border-radius:12px;
+    height: 6px;
+    background-color: #9CA3AF;
+    border:2px solid #eff1f5;
+  }
+
+  ::selection, code::selection {
+    text-shadow: none;
+    background: rgba(#86bdfd, 0.4);
+  }
+
+  :-webkit-tap-highlight-color {
+    color: rgba(0,0,0,0.2);
+  }
+
+  @mixin fader {
+    animation: fader 6s infinite;
+    
+    @keyframes fader {
+    0% {
+        opacity: .2;
+    }
+    50% {
+        opacity: 1;
+      }
+    }
+  }
+
+// page loader settings //
+.pre-loader {
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+/* CSS .pre-loader styles go here! */
+}
+
+.splash-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("#") 50% 50% no-repeat rgb(249,249,249);
+  background-color: #fff;
+  transition: all 12s ease-in;
+  @include fader;
+  overflow: hidden !important;
+} 
+
+
+// Default Color scheme settings //
+$default-color: #fff;
+$main-color: #f6f6f6;
+$main-black: #2a3540;
+$default-gray: #0e131d;
+$primary-color: #f5dbff;
+$secondary-color: #954194;
+$accent-color: #3f48cc;
+$text-color: rgb(20, 23, 26);
+$text-color-2: rgb(101, 119, 134);
+$shadow-color: #3c485842;
+
+// shades of gray //
+$gray-50: #F9FAFB;
+$gray-100: #F3F4F6;
+$gray-200: #E5E7EB;
+$gray-300: #D1D5DB;
+$gray-400: #9CA3AF;
+$gray-500: #6B7280;
+$gray-600: #4B5563;
+$gray-700: #374151;
+$gray-800: #1F2937;
+$gray-900: #111827;
+
+// UI colors //
+$ui-green: #1ABC9C;
+
+// Other Color Presets //
+$td-black: #2a3540;
+$td-red: #ff1100;
+$td-reddish-orange: #ff5e00;
+$td-orange: #ff9d00;
+$td-yellow: #ffe100;
+$td-yellow-variant-1: #ffff00;
+$td-yellow-variant-2: #DDFF00;
+$td-yellow-variant-3: #ffc600;
+$td-apple: #bfff00;
+$td-apple-green: #88ff00;
+$td-green: #00ff15;
+$td-greenish: #00ffbb;
+$td-greenish-variant-1: #00fffb;
+$td-bluish: #0066ff;
+$td-blue: #0048ff;
+$td-index-blue: #3178ff;
+$td-aqua: #00d2ff;
+$td-pink: #ff0077;
+$td-purplish: #bb00ff;
+$td-purple: purple;
+$td-purple-variant-1: #e600ff;
+$td-purple-pink: #ff00ff;
+$td-brown: rgb(52, 21, 0);
+$td-brown-light:rgb(126, 77, 59);
+$td-orangered:rgb(255, 86, 34);
+$td-orange-light:rgb(255, 152, 0);
+$td-orange-lighter:rgb(241, 195, 56);
+$td-yellow-light:rgb(255, 227, 0);
+$td-yellow-lighter:rgb(195, 242, 56);
+$td-avocado:rgb(110, 206, 0);
+$td-greener:rgb(0, 163, 7);
+$td-teal:rgb(0, 183, 167);
+$td-teal-blue:rgb(0, 207, 255);
+$td-teal-bluer:rgb(0, 166, 255);
+$td-blue-medium:rgb(0, 48, 255);
+$td-blue-lighter:rgb(63, 81, 181);
+$td-purple-light:rgb(103, 58, 183);
+$td-purple-pinky:rgb(195, 15, 225);
+$td-reddish-pink:rgb(255, 72, 134);
+$td-grey:rgb(128, 128, 128);
+$td-black:rgb(0, 0, 0);
+
+// gradients//
+$yellow-purple-grad: linear-gradient(90deg, #a027f0 0%, #e6cd60 100%);
+$dumb-yellow-grad: linear-gradient(90deg, #CD9195 0%, #E4C965 100%);
+$purplish-grad: linear-gradient(to bottom, #7927b2, #fb3182);
+$trenz-grad:  linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
+$greeny-grad: linear-gradient(120deg,#f6bd00 15%,#60c322 85%);
+$aqua-grad: linear-gradient(90deg, #3187ff 0%, #00d2ff 100%);
+$pinky-grad: linear-gradient(317deg, rgb(168, 74, 211) 15%, rgb(16, 2, 140) 83%);
+$aqua-grad: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+$greener-grad:linear-gradient(45deg, rgb(0, 131, 6), rgb(132, 247, 0));
+$td-blue-grad:linear-gradient(45deg, rgb(3, 108, 218), rgb(21, 245, 253));
+$pink-grad:linear-gradient(45deg, rgb(118, 0, 181), rgb(255, 87, 185));
+$td-reddish-grad: linear-gradient(45deg, rgb(177, 0, 27), rgb(255, 0, 23));
+$yellowish:linear-gradient(45deg, rgb(255, 102, 0), rgb(255, 210, 0));
+$black-grad:linear-gradient(45deg, rgb(0, 0, 0), rgb(159, 159, 159));
+$grey-grad:linear-gradient(45deg, rgb(194, 194, 194), rgb(255, 255, 255));
+
+// default dark theme scheme //
+$default-color-dark: #09131d;
+$primary-color-dark: #223548;
+$secondary-color-dark: #bcd8ff;
+$dark-grad-dark: linear-gradient(90deg, #102131 0%, #223548 100%);
+$dark-grad-darker:linear-gradient(90deg, #09131d 0%, #223548 100%);
+
+// global settings //
+html, body {
+    height: 100%;
+  }
+  
+  body .form__field__label, body blockquote, body dl, body dt, body figcaption, body li, body p, body textarea {
+    line-height: calc(1.5em + 0.2vw);
+    outline: 0;
+  }
+  
+  img,iframe,embed,picture {
+    max-width: 100%;
+    border-style: none;
+  }
+  
+  h1,h2,h3,h4 {
+    font-size: 1em;
+    font-weight: 500;
+  }
+  
+  p {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    @include transit-ease;
+  
+    &:hover {
+        color: $accent-color;
+    }
+  }
+  
+  hr {
+    color: darken($default-color, 5%);
+  }
+  
+  header {
+    top: 0;
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+  }
+  body {
+    width: 100vw;
+    color: $text-color;
+    background: $default-color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    overflow:auto;
+  }
+  
+  footer {
+    position: static;
+    bottom: 0.5rem;
+    width: 100%;
+    height: 5vh;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  button {
+    border: 0;
+    outline: 0;
+    margin: 1rem;
+    padding: 1em 2em;
+  
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  
+    display: inline-block;
+    vertical-align: middle;
+  
+    font: inherit;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+  
+    user-select: none;
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+    border-radius: 0.15em;
+    color: $default-color;
+    background: $accent-color;
+  
+    &:hover,
+    &:focus {
+      outline: 0;
+      text-decoration: none;
+      background: lighten($accent-color, 5%);
+    }
+    &:active {
+        box-shadow: none;
+        border: 0;
+        outline: 0;
+        }
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+  }
+  // ripple efect settings //
+button .ripple{
+    border-radius: 50%;
+    background: lighten($accent-color, 10%);
+    position: absolute;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    }
+    
+    @keyframes ripple{
+    to{
+      transform: scale(2.5);
+      opacity: 0;
+    }
+    }
+
+// mixin settings //
+@mixin blur {
+  background: transparent;
+  filter: blur(10px);
+}
+
+@mixin selection-disabled {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+@mixin circles {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    @include transit-ease;
+    background-color: lighten($accent-color, 5%);
+  
+  &:hover {
+    background-color: lighten($accent-color, 2.5%);
+  } 
+}
+
+// Ripple effect mixin //
+@mixin ripple($ripplecolor) {
+
+  .ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: $ripplecolor radial-gradient(circle, transparent 1%, $ripplecolor 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: lighten($ripplecolor, 5%);
+    background-size: 100%;
+    transition: background 0s;
+  }
+  }
+  
+// infinite ripple mixin //
+@mixin infinite-ripple($pick-color) {
+  background: transparent;
+  border-radius: 50%;
+  animation: rippling 3s linear infinite;
+  animation-delay: 1s;
+  
+  @keyframes rippling {
+    0% {
+      box-shadow: 0 0 0 .7rem rgba($pick-color, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 8rem rgba($pick-color, 0);
+    }
+  }
+  }
+
+  @mixin text-shimmer {
+    padding: 0 140px 0 0 !important;
+    color: rgba(255, 255, 255, 0.801);
+    background-color: #222;
+    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+    background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-animation-name: text-shimmer;
+    -moz-animation-name: text-shimmer;
+    animation-name: text-shimmer;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  
+  @-moz-keyframes text-shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @-webkit-keyframes text-shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @-o-keyframes text-shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @keyframes text-shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  }
+
+  @mixin text-gradient($grad) {
+    background: $grad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @mixin scaler {
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+  
+    &:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  
+  @mixin tap {
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+  
+    &:hover {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @mixin polaroid {
+      -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      -webkit-transition: all .20s linear;
+      -moz-transition: all .20s linear;
+      transition: all .20s linear;
+      z-index: 0;
+      position: relative;
+  
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+        z-index: 10;
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+        -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+      }
+  }
+  
+  @mixin ghosty {
+  animation: ghosty 12s ease-in 1s;
+  -webkit-animation: ghosty 12s ease-in 1s;
+    
+  @keyframes ghosty {
+  0% {
+  opacity: .1;
+  }
+  6% {
+  opacity: .2;
+  }
+  12% {
+  opacity: .3;
+  }
+  18% {
+  opacity: .4;
+  }
+  24% {
+  opacity: .6;
+  }
+  30% {
+  opacity: .7;
+  }
+  36% {
+  opacity: .8;
+  }
+  90% {
+  opacity: .9;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  }
+  
+  
+// media query settings //
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+      @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+      @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+      @content;
+  }
+}

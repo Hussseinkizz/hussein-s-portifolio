@@ -1,0 +1,49 @@
+#intro-space {
+    width: 100%;
+    margin-top: 3rem;
+}
+.intro-media {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(85%,15%) 1fr;
+    padding: 1rem;
+    padding-right: 3rem;
+}
+
+.intro-box {
+    padding-right: 1rem;
+}
+
+.intro-image{
+border: 2px solid $gray-500;
+border-radius: 50%;
+box-shadow: $bs-light;
+}
+
+.intro-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-text {
+    font-size: 18px;
+    width: 80%;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.intro-title {
+    width: 80%;
+    color: $main-color;
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: 'Made Dillan';
+    text-transform: capitalize;
+}
+
+.text-highlight {
+    color: $gray-300;
+}

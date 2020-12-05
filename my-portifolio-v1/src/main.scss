@@ -1,0 +1,181 @@
+@import "tie-and-dye";
+@import "main-nav";
+@import "mobile-nav-open";
+@import "mobile-nav-closed";
+@import "intro-space";
+@import "about";
+@import "projects";
+@import "blog";
+@import "contact";
+@import "social";
+
+
+.pre-loader {
+    background-color: $gray-900;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#slogan {
+    color: $gray-300;
+    margin: 0;
+    font: .8em verdana;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+  }
+  
+  /*
+   * Loading Dots
+   * Can we use pseudo elements here instead :after?
+   */
+  .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: .6em;
+    height: .6em;
+    margin: .19em;
+    background: #00ff15;
+    border-radius: .6em;
+    animation: loading 1s infinite alternate;
+  }
+  
+  /*
+   * Dots Colors
+   * Smarter targeting vs nth-of-type?
+   */
+  .loading span:nth-of-type(2) {
+    background: #bfff00;
+    animation-delay: 0.2s;
+  }
+  .loading span:nth-of-type(3) {
+    background: #ff9d00;
+    animation-delay: 0.4s;
+  }
+  .loading span:nth-of-type(4) {
+    background: #ffc600;
+    animation-delay: 0.6s;
+  }
+  .loading span:nth-of-type(5) {
+    background: #ffe100;
+    animation-delay: 0.8s;
+  }
+  .loading span:nth-of-type(6) {
+    background: #ffff00;
+    animation-delay: 1.0s;
+  }
+  .loading span:nth-of-type(7) {
+    background: #bfff00;
+    animation-delay: 1.2s;
+  }
+  .loading span:nth-of-type(8) {
+    background: #DDFF00;
+    animation-delay: 1.4s;
+  }
+  /*
+   * Animation keyframes
+   * Use transition opacity instead of keyframes?
+   */
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .noselect {
+    @include selection-disabled;
+}
+
+.hidden {
+  display: none;
+}
+
+  
+body {
+  overflow: hidden;
+  overflow-y: scroll;
+  cursor: pointer !important;
+  color: $gray-400;
+  background: $gray-900;
+}
+
+main {
+  height: 100%;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  position: fixed;
+  height: 3rem;
+  z-index: 10;
+  width: 100vw;
+}
+
+.textify {
+  @include text-gradient($trenz-grad);
+  font-weight: bold;
+  }
+  
+  .materialized {
+    @include text-gradient($trenz-grad);
+  }
+
+  .liner {
+    background: $gray-900;
+    width: 100%;
+    height: 2px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.test {
+  font-size: xx-large;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+
+.sections-holder {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: 10vh;
+}
+
+.flex-container {
+  margin-bottom: 8rem;
+}
+
+.text-highlight {
+  color: $gray-300;
+}
+
+.footer-sect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 200;
+  text-transform: capitalize;
+  text-align: center;
+  color: $gray-500;
+}

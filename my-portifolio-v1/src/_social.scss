@@ -1,0 +1,38 @@
+#social {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.social-content-icons {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.social-link {
+    color: $td-orangered;
+    font-size: 2vw;
+    padding-right: 1rem;
+}
+
+.social-mail {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mail-link {
+    @include text-gradient($trenz-grad);
+
+    &:hover {
+        color: $td-orangered;
+        border-bottom: 2px solid $gray-500;
+    }
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Larsseit';
+    src: local('Larsseit ExtraBold'), local('Larsseit-ExtraBold'),
+        url('Larsseit-ExtraBold.woff2') format('woff2'),
+        url('Larsseit-ExtraBold.woff') format('woff'),
+        url('Larsseit-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
