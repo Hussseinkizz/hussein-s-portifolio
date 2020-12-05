@@ -1,2 +1,2 @@
-# hussein-s-portifolio
-I built it with vanilla HTML, JQuery And Tailwind CSS
+# hussein-s-portifolio v1
+Built with vanilla HTML, JQuery And Tie & Dye CSS Library.
