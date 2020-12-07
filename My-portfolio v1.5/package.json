@@ -1,0 +1,26 @@
+{
+  "name": "my-portifolio",
+  "version": "1.5.0",
+  "description": "Built With Plain Html And Sass!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hussseinkizz/hussein-s-portifolio.git"
+  },
+  "keywords": [
+    "portifolio",
+    "sass",
+    "tie",
+    "and",
+    "dye"
+  ],
+  "author": "Hussein Kizz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hussseinkizz/hussein-s-portifolio/issues"
+  },
+  "homepage": "https://github.com/Hussseinkizz/hussein-s-portifolio#readme"
+}
